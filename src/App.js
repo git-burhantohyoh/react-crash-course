@@ -22,6 +22,7 @@ function App() {
       <Input addPost={addPost} />
       {posts.map((post) => (
         <Post 
+          key={post.id}
           id={post.id} 
           title={post.title} 
         />

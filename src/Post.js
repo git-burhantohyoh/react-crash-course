@@ -5,9 +5,10 @@ function Post({ id, title }) {
     return (
         <div className="Post">
             <div className="Post__title">{title}</div>
-            <image
+            <img
                 className="Post__image"
-                src={`https://source.unsplash.com/random?sig=${id}`}
+                src={`https://source.unsplash.com/random?sig=${id}`} 
+                alt=""
             />
         </div>
     )
