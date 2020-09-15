@@ -16,6 +16,12 @@ function App() {
     id += 1;
   }
 
+  function deletePost(id) {
+    const updatedPosts = posts.filter((post) => post.id !== id);
+    setPosts(updatedPosts);
+  }
+
+
   return (
     <div className="App">
       <Navbar />
@@ -25,6 +31,7 @@ function App() {
           key={post.id}
           id={post.id} 
           title={post.title} 
+          deletePost={deletePost}
         />
       ))}
     </div>
